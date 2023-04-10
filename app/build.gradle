@@ -43,4 +43,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
+    implementation "androidx.viewpager2:viewpager2:1.1.0-beta01"
 }
