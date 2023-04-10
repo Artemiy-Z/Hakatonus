@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Hakatonus"
         tools:targetApi="31">
         <activity
+            android:name=".CodeSMS"
+            android:exported="false" />
+        <activity
+            android:name=".PhonePassenger"
+            android:exported="false" />
+        <activity
+            android:name=".PhoneDriver"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
