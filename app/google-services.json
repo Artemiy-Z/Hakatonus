@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47114319799",
+    "project_id": "hacatonus",
+    "storage_bucket": "hacatonus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47114319799:android:187c5cb31bfb61cac55a32",
+        "android_client_info": {
+          "package_name": "com.example.hakatonus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47114319799-o72cga0sgnlq3vabi8oegieb5il83jh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANmOJ08AovCStwuT2ce28AdMYQJAl1ziw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47114319799-o72cga0sgnlq3vabi8oegieb5il83jh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
