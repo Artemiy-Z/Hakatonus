@@ -96,7 +96,7 @@ public class IntroActivity extends FragmentActivity {
         btn_driver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,PhoneDriver.class));
+                startActivity(new Intent(IntroActivity.this,PhoneActivity.class));
                 finish();
             }
         });
