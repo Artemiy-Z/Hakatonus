@@ -33,7 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         List<Driver> driverList = new ArrayList<>();
         driverList.add(new Driver(1,"test","Зубенко Михаил Петрович","Питер","Магадан"));
-
+        driverList.add(new Driver(2,"test2","Иванов Иван Иванович", "Казань", "Уфа"));
        setDriverRecycler(driverList);
 
 
@@ -57,7 +57,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
     private  void setDriverRecycler(List<Driver> driverList){
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         driverRecycler = findViewById(R.id.driverRecycler);
         driverRecycler.setLayoutManager(layoutManager);
 
