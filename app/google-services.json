@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "47114319799",
+    "firebase_url": "https://hacatonus-default-rtdb.firebaseio.com",
     "project_id": "hacatonus",
     "storage_bucket": "hacatonus.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "47114319799-035vprfc10tbsjbjoqo271kl2thpu8gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hakatonus",
+            "certificate_hash": "3b8e71d46554a4ae766ceec7356b2cbc86677264"
+          }
+        },
         {
           "client_id": "47114319799-o72cga0sgnlq3vabi8oegieb5il83jh1.apps.googleusercontent.com",
           "client_type": 3

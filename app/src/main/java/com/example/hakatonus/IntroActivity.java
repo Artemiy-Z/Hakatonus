@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 
+import com.google.firebase.FirebaseApp;
+
 import java.util.ArrayList;
 
 public class IntroActivity extends FragmentActivity {
@@ -88,7 +90,7 @@ public class IntroActivity extends FragmentActivity {
         btn_passenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,MainActivity.class));
+                startActivity(new Intent(IntroActivity.this,PhoneActivity.class));
                 finish();
             }
         });
