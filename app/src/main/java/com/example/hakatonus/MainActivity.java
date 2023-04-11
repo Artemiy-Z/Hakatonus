@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        MyDialogFragment d = new MyDialogFragment();
+        d.show(getSupportFragmentManager(), "exit");
+    }
+
     public void okClicked() {
         Toast.makeText(getApplicationContext(), "Вы выбрали кнопку OK!",
                 Toast.LENGTH_LONG).show();
@@ -29,7 +35,5 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Вы выбрали кнопку отмены!",
                 Toast.LENGTH_LONG).show();
     }
-
-    //        диологовое окно
 }
 

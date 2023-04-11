@@ -12,25 +12,23 @@
         android:theme="@style/Theme.Hakatonus"
         tools:targetApi="31">
         <activity
-            android:name=".CodeSMS"
-            android:exported="false" />
-        <activity
-            android:name=".PhonePassenger"
-            android:exported="false" />
-        <activity
-            android:name=".PhoneDriver"
-            android:exported="false" />
+            android:name=".PhoneActivity"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".IntroActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
