@@ -88,7 +88,7 @@ public class IntroActivity extends FragmentActivity {
         btn_passenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,PhonePassenger.class));
+                startActivity(new Intent(IntroActivity.this,MainActivity.class));
                 finish();
             }
         });
