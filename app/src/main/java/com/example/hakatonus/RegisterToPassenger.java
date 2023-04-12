@@ -38,7 +38,7 @@ public class RegisterToPassenger extends AppCompatActivity {
                 if (email_registerPas.getText().toString().isEmpty() || password_registerPas.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterToPassenger.this, "поля не заполнены", Toast.LENGTH_SHORT).show();
                 } else {
-                    mauth.signInWithEmailAndPassword(email_registerPas.getText().toString(),
+                    mauth.createUserWithEmailAndPassword(email_registerPas.getText().toString(),
                                     password_registerPas.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override

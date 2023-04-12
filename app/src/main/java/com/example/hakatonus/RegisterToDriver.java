@@ -39,13 +39,13 @@ public class RegisterToDriver extends AppCompatActivity {
                 if (email_registerDri.getText().toString().isEmpty() || password_registerDri.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterToDriver.this, "поля не заполнены", Toast.LENGTH_SHORT).show();
                 } else {
-                    mauth.signInWithEmailAndPassword(email_registerDri.getText().toString(),
+                    mauth.createUserWithEmailAndPassword(email_registerDri.getText().toString(),
                                     password_registerDri.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        startActivity(new Intent());
+                                        startActivity(new Intent(RegisterToDriver.this,MainActivity2.class));
                                     } else {
                                         Toast.makeText(RegisterToDriver.this, "такой пользователь уже существует ", Toast.LENGTH_SHORT).show();
                                     }
