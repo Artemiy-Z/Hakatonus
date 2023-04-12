@@ -32,8 +32,14 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         List<Driver> driverList = new ArrayList<>();
-        driverList.add(new Driver(1,"test","Зубенко Михаил Петрович","Питер","Магадан"));
-        driverList.add(new Driver(2,"test2","Иванов Иван Иванович", "Казань", "Уфа"));
+        driverList.add(new Driver(1,"car_dr1","Зубенко Михаил Петрович","Питер","Магадан"));
+        driverList.add(new Driver(2,"car_dr2","Иванов Иван Иванович", "Казань", "Уфа"));
+        driverList.add(new Driver(3,"car_dr3","Кисляк Андрей Игоревич", "Казань", "Уфа"));
+        driverList.add(new Driver(4,"car_dr4","Антипов Антон Юрьевич", "Казань", "Уфа"));
+        driverList.add(new Driver(5,"car_dr5","Понамарев Михаил Сергеевич", "Казань", "Уфа"));
+        driverList.add(new Driver(6,"car_dr6","Макеев Сергей Александрович", "Казань", "Уфа"));
+        driverList.add(new Driver(7,"car_dr7","Дроздов Игорь Васильевич", "Казань", "Уфа"));
+        driverList.add(new Driver(8,"car_dr8","Щукин Егор Михаилович", "Казань", "Уфа"));
        setDriverRecycler(driverList);
 
 
