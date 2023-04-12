@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg1"
+    tools:context=".RegisterToDriver">
+
+
+    <EditText
+        android:id="@+id/email_registerDri"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/phone_num_box"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/txt_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password_registerDri"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/phone_num_box"
+        android:hint="Придумайте пароль"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/txt_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_registerDri" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Зарегистрироваться как водитель "
+        android:textAlignment="center"
+        android:textColor="@color/txt_color"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_registerDri"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:layout_marginTop="80dp"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_registerDri" />
+
+    <TextView
+        android:id="@+id/txt_roleDri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Сменить роль "
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registerDri">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

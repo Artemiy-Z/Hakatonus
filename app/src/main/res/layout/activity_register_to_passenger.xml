@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg1"
-    tools:context=".Register">
-
+    tools:context=".RegisterToPassenger">
 
     <EditText
-        android:id="@+id/email_register"
+        android:id="@+id/email_registerPas"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_marginTop="300dp"
@@ -25,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_register"
+        android:id="@+id/password_registerPas"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
@@ -37,30 +36,46 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_register" />
+        app:layout_constraintTop_toBottomOf="@+id/email_registerPas" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:text="SignIn"
+        android:text="Зарегистрироваться как пассажир "
+        android:textAlignment="center"
         android:textColor="@color/txt_color"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_registerPas"
         android:layout_width="320dp"
         android:layout_height="80dp"
         android:background="@drawable/box_btn_bg"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:text="Зарегистрироваться"
         android:textColor="@color/txt_color"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_register" />
+        app:layout_constraintTop_toBottomOf="@+id/password_registerPas" />
+
+    <TextView
+        android:id="@+id/txt_rolePas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Сменить роль "
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registerPas">
+
+    </TextView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

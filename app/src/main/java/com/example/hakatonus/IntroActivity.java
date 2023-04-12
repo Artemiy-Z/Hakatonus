@@ -90,7 +90,8 @@ public class IntroActivity extends FragmentActivity {
         btn_passenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,PhoneActivity.class));
+                getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",1).apply();
+                startActivity(new Intent(IntroActivity.this,RegisterToPassenger.class));
                 finish();
             }
         });
@@ -98,7 +99,8 @@ public class IntroActivity extends FragmentActivity {
         btn_driver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,PhoneActivity.class));
+                getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",0).apply();
+                startActivity(new Intent(IntroActivity.this,RegisterToDriver.class));
                 finish();
             }
         });
