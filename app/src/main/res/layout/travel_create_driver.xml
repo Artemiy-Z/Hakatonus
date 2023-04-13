@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg1"
+    android:backgroundTint="#ddffffff"
+    android:backgroundTintMode="multiply"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/model"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:hint="Модель автомобиля"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/bg1"
+        android:textColor="@color/bg1"
+        android:textSize="24sp"
+        android:backgroundTint="@color/txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/capacity"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:hint="Сколько может поехать"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/bg1"
+        android:textColor="@color/bg1"
+        android:textSize="24sp"
+        android:backgroundTint="@color/txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:hint="Время поездки"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/bg1"
+        android:textColor="@color/bg1"
+        android:textSize="24sp"
+        android:backgroundTint="@color/txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:hint="Дата поездки"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/bg1"
+        android:textColor="@color/bg1"
+        android:textSize="24sp"
+        android:backgroundTint="@color/txt_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:layout_marginTop="40dp"
+        android:text="Отправить"
+        android:textAllCaps="false"
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/box_btn_bg"
+        android:layout_marginTop="20dp"
+        android:text="Отмена"
+        android:textAllCaps="false"
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</LinearLayout>

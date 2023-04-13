@@ -25,16 +25,8 @@
             android:fontFamily="serif"
             android:padding="24dp"
             android:textSize="18sp"
-            android:text="Узнай "
+            android:text="Доступные поездки"
             android:textColor="@android:color/white" />
-
-        <ImageView
-            android:id="@+id/bottom_sheet_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/polygon" />
 
     </LinearLayout>
 

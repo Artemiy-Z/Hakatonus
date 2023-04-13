@@ -1,11 +1,11 @@
 package com.example.hakatonus.model;
 
-public class Driver {
+public class TravelPassenger {
 
     int id;
     String img,txt_FIO,txt_kyda,txt_otkyda;
 
-    public Driver(int id, String img, String txt_FIO, String txt_kyda, String txt_otkyda){
+    public TravelPassenger(int id, String img, String txt_FIO, String txt_kyda, String txt_otkyda){
         this.id = id;
         this.img = img;
         this.txt_FIO = txt_FIO;

@@ -86,7 +86,7 @@ public class IntroActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",1).apply();
-                startActivity(new Intent(IntroActivity.this,Register.class));
+                startActivity(new Intent(IntroActivity.this,Login.class));
                 finish();
             }
         });
@@ -95,7 +95,7 @@ public class IntroActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",0).apply();
-                startActivity(new Intent(IntroActivity.this, Register.class));
+                startActivity(new Intent(IntroActivity.this, Login.class));
                 finish();
             }
         });

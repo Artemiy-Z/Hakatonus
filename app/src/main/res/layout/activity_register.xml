@@ -10,9 +10,10 @@
 
     <EditText
         android:id="@+id/email_registerDri"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/phone_num_box"
         android:hint="Введите email"
         android:inputType="textEmailAddress"
@@ -27,8 +28,9 @@
 
     <EditText
         android:id="@+id/password_registerDri"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/phone_num_box"
         android:hint="Придумайте пароль"
@@ -43,9 +45,10 @@
         app:layout_constraintTop_toBottomOf="@+id/email_registerDri" />
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="120dp"
         android:text="Зарегистрироваться как водитель"
         android:textAlignment="center"
         android:textColor="@color/txt_color"
@@ -56,10 +59,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_registerDri"
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/box_btn_bg"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="Зарегистрироваться"
         android:textColor="@color/txt_color"
         android:textSize="24sp"
@@ -81,5 +85,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_registerDri">
 
     </TextView>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Уже есть аккаунт"
+        android:textColor="@color/txt_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_roleDri" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

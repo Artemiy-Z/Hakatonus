@@ -7,76 +7,103 @@
     tools:context=".MainActivity">
 
     <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mapView"/>
+        android:layout_height="match_parent" />
 
-    <LinearLayout android:id="@+id/buttons"
+    <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton android:id="@+id/setA"
+        <ImageButton
+            android:id="@+id/setA"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/a_b"
             android:scaleType="fitXY"
-            android:layout_marginBottom="20dp"/>
-        <ImageButton android:id="@+id/setB"
+            android:src="@drawable/a_b" />
+
+        <ImageButton
+            android:id="@+id/setB"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/b_b" />
+
+        <ImageButton
+            android:id="@+id/startTravel"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/b_b"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            android:src="@drawable/start_travel"
+            android:visibility="invisible" />
     </LinearLayout>
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_container"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:background="@color/bg1"
-        android:id="@+id/top_container"
         android:visibility="gone">
-        
+
         <EditText
             android:id="@+id/adress"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/box_btn_bg"
             android:backgroundTint="@color/txt_color"
+            android:hint="Укажите адрес..."
+            android:paddingStart="20dp"
             android:textColor="@color/bg1"
             android:textColorHint="#55828B"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="35dp"
-            android:hint="Укажите адрес..."
-            android:paddingStart="20dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton android:id="@+id/yes"
+        <ImageButton
+            android:id="@+id/yes"
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
             android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="centerInside"
             android:src="@drawable/accept"
-            android:scaleType="centerInside"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="50dp"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageButton android:id="@+id/no"
+        <ImageButton
+            android:id="@+id/no"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/reject"
-            android:scaleType="centerInside"
+            android:layout_marginEnd="6dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="6dp"/>
-        
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/reject"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/bottom_sheet_dialog" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include android:id="@+id/driver_create"
+        layout="@layout/travel_create_driver"
+        android:visibility="gone"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
