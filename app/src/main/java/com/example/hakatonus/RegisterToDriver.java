@@ -14,13 +14,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterToDriver extends AppCompatActivity {
 
     private EditText email_registerDri;
     private EditText password_registerDri;
     private AppCompatButton btn_registerDri;
-    private FirebaseAuth mauth;
+    private DatabaseReference mDatabase;
+    private String USER_KEY = "User";
+
 
 
     @Override
@@ -31,30 +35,20 @@ public class RegisterToDriver extends AppCompatActivity {
         email_registerDri = findViewById(R.id.email_registerDri);
         password_registerDri = findViewById(R.id.password_registerDri);
         btn_registerDri = findViewById(R.id.btn_registerDri);
-        mauth = FirebaseAuth.getInstance();
+
+        mDatabase = FirebaseDatabase.getInstance().getReference(USER_KEY);
 
         btn_registerDri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (email_registerDri.getText().toString().isEmpty() || password_registerDri.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterToDriver.this, "поля не заполнены", Toast.LENGTH_SHORT).show();
-                } else {
-                    mauth.createUserWithEmailAndPassword(email_registerDri.getText().toString(),
-                                    password_registerDri.getText().toString())
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        startActivity(new Intent(RegisterToDriver.this,MainActivity2.class));
-                                    } else {
-                                        Toast.makeText(RegisterToDriver.this, "такой пользователь уже существует ", Toast.LENGTH_SHORT).show();
-                                    }
+                String id = mDatabase.getKey();
+                String email = email_registerDri.getText().toString();
 
-                                }
-                            });
-                }
+                User newUser = new User(id,email);
+                mDatabase.push().setValue(newUser);
             }
         });
+
 
     }
 
