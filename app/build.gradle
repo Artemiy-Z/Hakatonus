@@ -47,6 +47,7 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:31.2.2')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-abt:21.1.1'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'

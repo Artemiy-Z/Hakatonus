@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hakatonus</string>
+    <string name="useragent">HakatonusWebAgent/1.0</string>
 </resources>

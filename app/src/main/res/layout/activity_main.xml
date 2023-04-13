@@ -10,4 +10,73 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/mapView"/>
+
+    <LinearLayout android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp">
+
+        <ImageButton android:id="@+id/setA"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/a_b"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"/>
+        <ImageButton android:id="@+id/setB"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/b_b"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/bg1"
+        android:id="@+id/top_container"
+        android:visibility="gone">
+        
+        <EditText
+            android:id="@+id/adress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/box_btn_bg"
+            android:backgroundTint="@color/txt_color"
+            android:textColor="@color/bg1"
+            android:textColorHint="#55828B"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="35dp"
+            android:hint="Укажите адрес..."
+            android:paddingStart="20dp"/>
+
+        <ImageButton android:id="@+id/yes"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/accept"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="50dp"/>
+
+        <ImageButton android:id="@+id/no"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/reject"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="6dp"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

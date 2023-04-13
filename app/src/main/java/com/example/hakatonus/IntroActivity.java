@@ -1,7 +1,6 @@
 package com.example.hakatonus;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -14,10 +13,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.widget.ImageButton;
-
-import com.google.firebase.FirebaseApp;
 
 import java.util.ArrayList;
 
@@ -91,7 +86,7 @@ public class IntroActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",1).apply();
-                startActivity(new Intent(IntroActivity.this,RegisterToPassenger.class));
+                startActivity(new Intent(IntroActivity.this,Register.class));
                 finish();
             }
         });
@@ -100,7 +95,7 @@ public class IntroActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 getSharedPreferences("signin",MODE_PRIVATE).edit().putInt("role",0).apply();
-                startActivity(new Intent(IntroActivity.this,RegisterToDriver.class));
+                startActivity(new Intent(IntroActivity.this, Register.class));
                 finish();
             }
         });

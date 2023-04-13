@@ -1,6 +1,5 @@
 package com.example.hakatonus;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -8,16 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterToDriver extends AppCompatActivity {
+import java.util.HashMap;
+
+public class Register extends AppCompatActivity {
 
     private EditText email_registerDri;
     private EditText password_registerDri;
@@ -30,7 +27,9 @@ public class RegisterToDriver extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_to_driver);
+        setContentView(R.layout.activity_register);
+
+        if(getSharedPreferences("signin", ""))
 
         email_registerDri = findViewById(R.id.email_registerDri);
         password_registerDri = findViewById(R.id.password_registerDri);
@@ -41,11 +40,12 @@ public class RegisterToDriver extends AppCompatActivity {
         btn_registerDri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String id = mDatabase.getKey();
                 String email = email_registerDri.getText().toString();
 
-                User newUser = new User(id,email);
-                mDatabase.push().setValue(newUser);
+                HashMap<String, String> newUser = new HashMap<>();
+                newUser.put("email", email);
+
+                mDatabase.child(FirebaseAuth.getInstance().getUid()).setValue(newUser);
             }
         });
 
@@ -54,7 +54,7 @@ public class RegisterToDriver extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(RegisterToDriver.this, IntroActivity.class));
+        startActivity(new Intent(Register.this, IntroActivity.class));
         finish();
     }
 }

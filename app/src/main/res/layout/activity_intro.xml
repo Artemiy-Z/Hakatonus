@@ -27,10 +27,11 @@
             android:layout_height="80dp"
             android:layout_marginBottom="120dp"
             android:background="@drawable/box_btn_bg"
-            android:text="войти как пассажир"
+            android:text="Войти как пассажир"
             android:textColor="@color/txt_color"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -45,10 +46,11 @@
             android:layout_height="80dp"
             android:layout_marginBottom="120dp"
             android:background="@drawable/box_btn_bg"
-            android:text="войти как водитель"
+            android:text="Войти как водитель"
             android:textColor="@color/txt_color"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -57,10 +59,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nextB"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="40dp"
+            android:scaleType="fitXY"
             android:background="@drawable/polygon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +72,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/prevB"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:background="@drawable/polygon_2"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="40dp"
