@@ -203,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
     public void load(ArrayList<String> keys, int index, ArrayList<TravelDriver> driverList) {
         if(index == keys.size()) {
             setDriverRecycler(driverList);
+            return;
         }
         TravelDriver t = new TravelDriver();
         FirebaseDatabase.getInstance().getReference("travels/drivers").child(keys.get(index)).child("model").addListenerForSingleValueEvent(new ValueEventListener() {
